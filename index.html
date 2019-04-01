@@ -1,0 +1,61 @@
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Book search app</title>
+      <link rel="stylesheet" href="css/styles.css">
+      <script type="text/javascript" src="app.js" async></script>
+    </head>
+    <body>
+    <div class="container">
+      <div id="app-container">
+        <div id="head-app">
+          <h1 class="title" >Bookorama</h1>
+          <h4>Books for Ninjas</h4>
+          <div id="search-book">
+            <input type="text" placeholder="Search books...">
+          </div>
+        </div>
+        <div id="body-app">
+          <h2 class="title" >Books to Read</h2>
+          <div class="list-titles">
+            <ul>
+              <li>
+                <span class="name">Kafka on the Shore</span>
+                <span class="button delete">Delete</span>
+              </li>
+              <li>
+                <span class="name">The whise man Fear</span>
+                <span class="button delete">Delete</span>
+              </li>
+              <li>
+                <span class="name">Name of the wind</span>
+                <span class="button delete">Delete</span>
+              </li>
+              <li>
+                <span class="name">Cien años de soledad</span>
+                <span class="button delete">Delete</span>
+              </li>
+              <li>
+                <span class="name">The master and the margaritas</span>
+                <span class="button delete">Delete</span>
+              </li>
+              <li>
+                <span class="name">The War of art</span>
+                <span class="button delete">Delete</span>
+              </li>
+            </ul>
+            <div class="checkbox-container">
+              <input type="checkbox" id="check-all" value=""><label for="check-all"><span>Hide all</span></label>
+            </div>
+          </div>
+          <form id="add-book" class="add-book">
+            <input type="text" placeholder="Add book...">
+            <button>Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

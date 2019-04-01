@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#app-container {
+  min-width: 45%;
+  min-height: 550px;
+  margin: 20px 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #d9d9d9;
+  border-radius: 2px;
+  font-family: Lato;
+}
+#head-app {
+  background: #262626;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  color: #fff;
+}
+#head-app h1, h4 {
+  margin: 0;
+  line-height: 1.5em;
+}
+#head-app div {
+  width: 50%;
+  border-radius: 2px;
+}
+#head-app input{
+  margin-top: 30px;
+  width: 100%;
+  height: 30px;
+  font-size: .9em;
+  padding-left: 5px;
+  border: 1.3px solid #eaeaea;
+
+  border-radius: 2px;
+  outline: none;
+}
+#head-app input:focus {
+  border-color: #1B62B9;
+}
+#body-app {
+  background: #d9d9d9;
+  /* background-color: #fff; */
+  width: 100%;
+  min-height: 332px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#body-app .list-titles {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.list-titles ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+.list-titles ul li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  line-height: 2em;
+  margin: 5px 0;
+  transition: .2;
+}
+.list-titles ul li span:nth-child(1) {
+  border-left: 5px solid #80bfff;
+  padding-left: 5px;
+  width: 100%;
+}
+.list-titles ul li span:nth-child(1):hover {
+  border-left: 5px solid #3399ff;
+}
+.list-titles ul li span:nth-child(2) {
+  background: #ff0000;
+  width: 100px;
+  max-height: 32px;
+  text-align: center;
+  border-radius: 2px;
+  color: #fff;
+  height: 2em;
+}
+.list-titles ul li span:nth-child(2):hover {
+  background: #cc0000;
+  cursor: pointer;
+}
+.list-titles ul li span:nth-child(2):active {
+  transform: scale(.99);
+}
+.checkbox-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.checkbox-container span {
+  padding-left: 5px;
+}
+#body-app .add-book {
+  width: 70%;
+  display: flex;
+}
+.add-book input, button{
+  height: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+.add-book input {
+  width: 70%;
+  font-size: .9em;
+  padding-left: 5px;
+  box-sizing: border-box;
+  border: 1px solid #eaeaea;
+  border-radius: 2px;
+  outline: none;
+}
+.add-book input:focus {
+  border-color: #1B62B9;
+  border-radius: 2px;
+}
+.add-book button {
+  width: 30%;
+  background: #373737;
+  text-align: center;
+  color: #cccccc;
+  border: 2px solid #373737;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  padding: 1px;
+  font-size: 1em;
+}
+.add-book button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  #app-container {
+    width: 100%;
+    margin: 0;
+  }
+  .list-titles ul li span:nth-child(2) {
+    width: 94.88px;
+  }
+  #body-app .list-titles {
+    width: 90%;
+  }
+}
