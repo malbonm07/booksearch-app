@@ -22,12 +22,20 @@ addForm.addEventListener('submit', (e) => {
   deleteBtn.textContent = 'Delete';
   bookName.textContent = value;
   //add class name
-  deleteBtn.classList.add('button', 'delete')
+  let regexSpaces = /^\S+(?: \S+)*$/;
+  if(bookName.textContent && bookName.textContent.match(regexSpaces)) {
 
-  //append to document
-  li.appendChild(bookName)
-  li.appendChild(deleteBtn)
-  list.appendChild(li)
+    deleteBtn.classList.add('button', 'delete')
+    bookName.textContent = bookName.textContent.replace(bookName.textContent[0], bookName.textContent.split("")[0].toUpperCase())
+    //append to document
+    li.appendChild(bookName)
+    li.appendChild(deleteBtn)
+    list.appendChild(li)
+    return addForm.querySelector('input[type=text]').value = null
+  }else {
+    addForm.querySelector('input[type=text]').value = null
+  }
+
 })
 
 const checkAll = document.querySelector('#check-all')
